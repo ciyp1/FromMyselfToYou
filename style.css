@@ -1,0 +1,99 @@
+.buttonContainer {
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition: opacity 0.3s ease, transform 0.5s ease;
+}
+
+#loveButton {
+    padding: 10px 20px;
+    background-color:pink;
+    color: white;
+    border:none;
+    border-radius:5px;
+    font-size:18px;
+}
+
+#loveButton:hover {
+    background-color:hotpink;
+}
+
+.fadeOut {
+    opacity: 0;
+    transform: scale(0.7);
+}
+
+/* Heart animation */
+.heart1 {
+    position: absolute;
+    color: red;
+    font-size: 24px;
+    animation: floatUp 1.5s ease-out forwards;
+    user-select: none;
+    pointer-events: none;
+}
+
+.heart2 {
+    position: absolute;
+    color: red;
+    font-size: 24px;
+    top: -30px;
+    animation: fall 3s linear forwards;
+    pointer-events: none;
+    user-select: none;
+}
+
+#loveMessage {
+    text-align: center;
+    opacity: 0;
+    transform: scale(0.9);
+    transition: all 1s ease;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+#loveImage {
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 192, 203, 0.5);
+}
+
+#loveText {
+    font-size: 24px;
+    color: hotpink;
+    margin-top: 10px;
+}
+
+#loveMessage.show {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.hidden {
+    display: none; }
+
+@keyframes fall {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(100vh);
+        opacity: 0; }
+    }
+
+@keyframes floatUp {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-100px);
+    } }

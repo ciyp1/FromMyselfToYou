@@ -72,6 +72,6 @@ document.querySelector("#loveImage").addEventListener("click", function() {
     var image1 = document.querySelector("#loveImage");
     var randomNumber1 = Math.floor(Math.random() * 10) + 1;
     var randomImage = "loveImage" + randomNumber1 + ".jpg";
-    var randomImageSource = "images/" + randomImage;
+    var randomImageSource = "FromMyselfToYou/Images/" + randomImage;
     image1.setAttribute("src", randomImageSource);
 })
